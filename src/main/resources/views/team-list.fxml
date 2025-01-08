@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeamListController">
+    <TableView fx:id="teamsTable" prefHeight="200.0" prefWidth="600.0">
+      <columns>
+          <TableColumn fx:id="teamPlayers" prefWidth="300.0" text="Team Players"/>
+          <TableColumn fx:id="teamName" prefWidth="300.0" text="Team Name"/>
+      </columns>
+    </TableView>
+    <Button fx:id="editTeamNameButton" layoutX="100.0" layoutY="300.0" mnemonicParsing="false"
+            onAction="#onActionUpdate" prefWidth="100.0" text="Edit Team Name">
+        <font>
+          <Font size="11.0"/>
+        </font>
+    </Button>
+    <Button fx:id="startTournamentButton" layoutX="400.0" layoutY="300.0" mnemonicParsing="false"
+            onAction="#onActionStartTournament" prefWidth="100.0" text="Start Tournament">
+        <font>
+          <Font size="11.0"/>
+        </font>
+    </Button>
+    <TextField fx:id="teamNameEntry" alignment="CENTER" layoutX="200.0" layoutY="250.0" onAction="#onActionUpdate"
+               prefHeight="25.0" prefWidth="200.0" promptText="Enter team name"/>
+</AnchorPane>

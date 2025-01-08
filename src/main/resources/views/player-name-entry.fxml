@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="playerNameEntryScreen" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayerNameEntryController">
+    <!-- Create a VBox to vertically stack the elements and center them -->
+    <VBox alignment="CENTER" spacing="20">
+
+        <!-- Label for prompting user to enter player name -->
+        <Label alignment="CENTER" prefWidth="300.0" text="Enter player names" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <!-- TextField for player name input -->
+        <TextField fx:id="playerNameEntry" maxWidth="300.0" minWidth="300.0" onAction="#onActionAddPlayer" prefHeight="26.0" prefWidth="300.0" promptText="Player Name" />
+
+        <!-- Button to trigger adding player -->
+        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#onActionAddPlayer" text="Next" />
+
+        <!-- Button for 'done' action -->
+        <Button fx:id="doneButton" mnemonicParsing="false" onAction="#onActionContinue" text="Done" />
+
+        <!-- TableView for displaying player names -->
+        <TableView fx:id="playerTable" prefHeight="300.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="playerColumn" prefWidth="600.0" text="Players" />
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>
